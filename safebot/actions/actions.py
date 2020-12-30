@@ -1,0 +1,131 @@
+# This files contains your custom actions which can be used to run
+# custom Python code.
+#
+# See this guide on how to implement these action:
+# https://rasa.com/docs/rasa/custom-actions
+
+
+# This is a simple example for a custom action which utters "Hello World!"
+
+from typing import Any, Text, Dict, List
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.forms import FormAction
+import csv
+from rasa_sdk.events import (
+    SlotSet,
+    UserUtteranceReverted,
+    ConversationPaused,
+    EventType,
+    FollowupAction,
+)
+
+# class ActionHelloWorld(Action):
+#
+#     def name(self) -> Text:
+#         return "action_hello_world"
+#
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#
+#         dispatcher.utter_message(text="Hello World!")
+#
+#         return []
+class ActionGetRiskType(Action):
+
+    def name(self) -> Text:
+        return "action_get_risktype"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        incident_description = tracker.latest_message['text']
+        
+        # This is incidnet"
+
+        dispatcher.utter_message(text="This is the incident description : {0}".format(incident_description))
+
+        return []
+
+class UserForm(FormAction):
+
+    def name(self):
+        return "user_form"
+
+    @staticmethod
+    def required_slots(tracker):
+        return ["industry_type","location","country"]
+
+    
+    def submit(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+
+        dispatcher.utter_message(template="utter_get_incident_description")
+        return []
+
+
+class ActionDefaultAskAffirmation(Action):
+   """Asks for an affirmation of the intent if NLU threshold is not met."""
+
+   def name(self):
+       return "action_default_ask_affirmation"
+
+   def __init__(self):
+       self.intent_mappings = {}
+       # read the mapping from a csv and store it in a dictionary
+       with open('C:/Users/niles/OneDrive/Learn/rasa/safebot/actions/intent_mapping.csv', newline='', encoding='utf-8') as file:
+           csv_reader = csv.reader(file)
+           for row in csv_reader:
+               self.intent_mappings[row[0]] = row[1]
+
+   def run(self, dispatcher, tracker, domain):
+       # get the most likely intent
+       last_intent_name = tracker.get_intent_of_latest_message(skip_fallback_intent =True)
+     
+       # get the prompt for the intent
+    
+       intent_prompt = self.intent_mappings[last_intent_name]
+
+       # Create the affirmation message and add two buttons to it.
+       # Use '/<intent_name>' as payload to directly trigger '<intent_name>'
+       # when the button is clicked.
+       message = "Did you mean '{}'?".format(intent_prompt)
+       buttons = [{'title': 'Yes',
+                   'payload': '/{}'.format(last_intent_name)},
+                  {'title': 'No',
+                   'payload': '/out_of_scope'}]
+       dispatcher.utter_message(message, buttons=buttons)
+
+       return []
+
+class ActionDefaultFallback(Action):
+    def name(self) -> Text:
+        return "action_default_fallback"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+
+        # Fallback caused by TwoStageFallbackPolicy
+        if (
+            len(tracker.events) >= 4
+            and tracker.events[-4].get("name") == "action_default_ask_affirmation"
+        ):
+
+            dispatcher.utter_message(template="utter_restart_with_button")
+
+            return [SlotSet("feedback_value", "negative"), ConversationPaused()]
+
+        # Fallback caused by Core
+        else:
+            dispatcher.utter_message(template="utter_default")
+            return [UserUtteranceReverted()]

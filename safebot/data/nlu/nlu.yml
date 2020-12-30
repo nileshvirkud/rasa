@@ -1,0 +1,571 @@
+version: "2.0"
+nlu:
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - I am good
+    - I am good today
+    - I am feeling good today
+    - good.thanks 
+    - I am good.thanks
+    - I am good.how are you?
+    - I am good.how about you?
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: human_handoff
+  examples: |
+    - Can I speak to anyone who can really help me?
+    - Could I talk to [Tyrone King](name)?
+    - I don't wanna talk to a bot
+    - I dont like to talk to a machine
+    - I want to talk to a human
+    - I want to talk to the founders
+    - are there also humans working for your company?
+    - can I speak to a person?
+    - can i please speak to a human?
+    - can you forward me to your team
+    - can you please connect me to a real rasa employee?
+    - can you put me in touch with a human?
+    - do you have human support ?
+    - gimme a proper human
+    - give me a human
+    - give me a human now
+    - human handoff
+    - i dont wanna talk to a bot
+    - i want to speak to a [manager](job_function)
+    - i want to speak to a real person
+    - i want to speak to customer service
+    - i want to talk to a human
+    - i want to talk to a person
+    - i want to talk to human
+    - i want to talk to someone at rasa
+    - i want to talk to someone else
+    - i want to talk to someone who is smarter than you
+    - i would like to speak to a person
+    - i'd rather speak with a real rasa employee
+    - id like to talk to a real rasa employee
+    - let me speak with a real person please
+    - let me talk to a human
+    - let me talk to a real person
+    - please give me a human
+    - service agent
+    - someone from customer care
+    - speak to a real person
+    - talking to a bot is stupid
+    - that's annoying I'd like to speak to someone real
+    - thats not helping, can i talk to human?
+    - wrong i want to speak to a human
+    - can i speak to human
+    - can i speak to your human
+    - i want to chat with human
+    - How do I talk to a human
+    - talk with a human
+    - Can i talk to a human instead
+    - nevermind.... you're not human ... I need to talk to a live person
+    - Can you get a human to assist me?
+    - Can i talk to a human?
+    - Can I talk to a human
+    - Can I speak to a human?
+    - can i speak to a human
+    - no, i want to talk to human
+    - can you hand a conversation over to a human?
+    - can I talk to human?
+    - can I talk to human
+    - talk to human
+    - i want human :(
+    - can i talk to human
+    - i want to talk to a human \
+    - i want to speak to human
+    - can i talk to a real person?
+    - connect me to a real person
+    - I need a real person
+    - can i took with a real person
+    - let me speak to a real person
+    - let me speak to a real person please
+    - i want to talk to a real person
+- intent: how_to_get_started
+  examples: |
+    - I want to know risk type
+    - risk type
+    - risks type
+    - show me risk type
+    - can you explain risk type
+    - what is risk type
+    - what are the risks involved
+    - whats the risk
+    - tell me risk type
+    - help me with risks type
+    - help me with risk type
+    - can you help me to understand safety risks
+    - can you tell me how to classify safety risks?
+    - Can you shw me some information about safety risks?
+    - Can you tell me more about safety risk?
+    - Get started
+    - Help me get started
+    - Hi, how can i get started with 
+    - Hot to get started with SafetyBot
+    - How can I get started with SafetyBot
+    - How can I get started with SafetyBot?
+    - How can I get started with SafetyBot?
+    - How can I get started?
+    - How do I download SafetyBot
+    - How do I download SafetyBot ?
+    - How do I get started
+    - How do I get started with SafetyBot?
+    - How do I get started?
+    - How do I start
+    - How do i get started
+    - How get started?
+    - How to get start
+    - How to get started
+    - How to get started with SafetyBot
+    - How to get started with SafetyBot 
+    - How to get started with SafetyBot?
+    - How to get started?
+    - How to get starter?
+    - How to start using SafetyBot
+    - I am [new](user_type)
+    - I am [new](user_type) to SafetyBot
+    - I like to classify risks
+    - I need to know if I can use SafetyBot to classify risks?
+    - I want know about SafetyBot
+    - I want to classify risks
+    - I want to classify risks and accident level
+    - I want to know how to get started with SafetyBot
+    - I want to know more about SafetyBot
+    - I want to know more about risk classification
+    - I want to learn more about risk classification
+    - I would like to know more about risk classification 
+    - I'm [new](user_type)
+    - I'm [new](user_type) in SafetyBot, help me!
+    - I'm [new](user_type) to SafetyBot
+    - I'm [new](user_type) to SafetyBot
+    - Im [new](user_type)
+    - Lets start with the basics
+    - More about SafetyBot 
+    - Only SafetyBot 
+    - Please tell me how I can start?
+    - Please tell me how to get started
+    - Please tell me how to get started with SafetyBot
+    - Sure, give me the basics
+    - Tell me how to get started
+    - Tell me how to get started with SafetyBot
+    - Tell me more about Get started with SafetyBot
+    - Yeah please help me out
+    - Yes I am [new](user_type)
+    - Yes, I want to know more about risk classification
+    - can i try it out
+    - can u teach me
+    - can you explain safety risk 
+    - can you help me get started?
+    - can you help me with the risk classification?
+    - classes of of safety risks
+    - classes in safety risks
+    - classes of safety risks?
+    - classes of safety risks
+    - safety risks classes
+    - different classes of safety risks
+    - find out how to get started with SafetyBot
+    - from where I should start?
+    - get starte
+    - get started
+    - get started pls
+    - get started with SafetyBot
+    - get started with SafetyBot
+    - get strarted with SafetyBot
+    - give me some information on SafetyBot
+    - having trouble with SafetyBot
+    - help me classify risks
+    - help me get started
+    - help with SafetyBot
+    - hi can you help me classify risks
+    - hi, can you help in understanding risks
+    - how about SafetyBot
+    - how about classifying risks
+    - how can I classify risks
+    - how can I get started
+    - how can I get started?
+    - how can I learn risk classification
+    - how can i classify risk
+    - how can i get started with risk classification?
+    - how can i get started with risk classification
+    - how can i get started?
+    - how can i start
+    - how can i start with risk classification ?
+    - how cna i get started with risk classification
+    - how do I classify risks?
+    - how do I get risk classification
+    - how do I get started
+    - how do I get started with risks classification
+    - how do I get started with accident level
+    - how do I get started?
+    - how do I start
+    - how do I use SafetyBot
+    - how do i classify risks
+    - how do i classify risks?
+    - how do i classify a safe risks?
+    - how do i classify a safety risk ?
+    - how do i get classification
+    - how do i get accident level  
+    - how do i get startd?
+    - how do i get started
+    - how do i get started with SafetyBot
+    - how do i get started with safety bot
+    - how do i get started with Safe Bot
+    - how do i get started with Safety Bot  
+    - how do i get started with SafetyBot myself?
+    - how do i get started?
+    - how do i sstart
+    - how do i start
+    - how do you classify risks
+    - how easy is it to use SafetyBot?
+    - how start
+    - how this SafetyBot works
+    - how to classify risks
+    - how to classify risks?
+    - how to get sarted
+    - how to get start
+    - how to get start with SafetyBot
+    - how to get started
+    - how to get started with
+    - how to get started with Safety bot
+    - how to get started with Safety Bot?
+    - how to get started with Saftey Bto
+    - how to get started with Safety Bot
+    - how to get started with Safety obt ?
+    - how to get started with Saefty Bot  
+    - how to get started with Safeyt Bot
+    - how to get started?
+    - how to get strated
+    - how to get strated?
+    - i am [new](user_type)
+    - i am [new](user_type) to Safety bot
+    - i am a [new](user_type)
+    - i am a [new](user_type) user
+    - i m [new](user_type)
+    - i need help with Safety risk
+    - i need more info for Safety risk
+    - i wanna classify risks
+    - i wanna get started
+    - i wanna try SafetyBot
+    - i want to classify risks please help me
+    - i want to classify risks
+    - i want to get started
+    - i want to get started with SafetyBot
+    - i want to know about SafetyBot  
+    - i want to learn about risk classification
+    - i want to learn about accident level
+    - i want to learn about potential accident level
+    - i would like more explanation on safety risks
+    - i would like to know how to get started with risk classification
+    - i'd like to get started with isk classification
+    - i'm [new](user_type)
+    - i'm [new](user_type) to risk classification
+    - im a [new](user_type) to safety risks
+    - information about risks classification
+    - just accident level
+    - just risks type
+    - just risks classes
+    - just risks classification
+    - just potential accident level
+    - let's start
+    - lets get started
+    - more about risks classes
+    - more about risks classification please
+    - more about accident level
+    - more about potential accident level
+    - more info on accident level
+    - more info on accident level pls
+    - more information on risks classes  
+    - more information on risks classes
+    - need help in finding information about risks classification
+    - ok i am [new](user_type) to classification
+    - ow to get started with risks classification
+    - parts of risks
+    - please teach me
+    - pls explain how to get started
+    - risks classification  
+    - accident level  
+    - potential accident level  
+    - so, how do I use SafetyBot?
+    - start SafetyBot
+    - tell me about SafetyBot 
+    - tell me about risks  
+    - tell me about risks classification
+    - tell me about risks classification please
+    - tell me about risks classification
+    - tell me about the accident level
+    - tell me about the different classes of risks
+    - tell me how i can get started with SafetyBot
+    - tell me how to get started with risk classification
+    - tell me how to start
+    - tell me more about potential accident level
+    - tell me more about how to classify risks
+    - tell me more about accident level
+    - tell me something about accident level
+    - the classes of risks
+    - the classes of accidents
+    - want to classify risks
+    - whar are the classes of risks?
+    - what accident level
+    - what about accident level?
+    - what are your features ?
+    - what is accident level
+    - what is the best place to get started?
+    - what is this risks class thing?
+    - what's risks 
+    - what's risks level
+    - where can I learn more about risks classification 
+    - where can i learn to classify risks
+    - where do i find accident levels
+    - where do i start?
+    - where should i start from
+    - where to start?
+    - yes i wanna know more about risks classification
+    - I am trying to classify risks 
+    - i am [new](user_type) but so how can i start
+    - where can i find risks classification document
+    - more about accident level
+    - tell me about accident level
+    - i want to know about accident level
+    - get started with accident level
+    - Can you brief me about safety risks
+    - Can you tell me more about safety risks?
+    - Can you tell me what safety risks does?
+    - Could you tell me more about safety risks?
+    - Give me more information about safety risks
+    - How does safety risks work?
+    - I want to know about safety rsik
+    - I want to know what safety risks actually does that isn't clear to me yet
+    - I want to learn what safety risks does
+    - I want to learn what safety risks is
+    - I would like to know about safety risks
+    - I would like to know more about your product
+    - OK can u brief me Abt safety risks
+    - safety risks?
+    - safety risks Is?
+    - WHAT IS IT
+    - WHAT IS safety risks
+    - What Is safety risks?
+    - What can safety risks do?
+    - What components does safety risks have?
+    - What exactly is safety risks?
+    - What is safety risks?
+    - What is safety risks doing exactly?
+    - What is safety risks?
+    - What's safety risks?
+    - can you explain safety risks?
+    - can you pls explain what safety risks does
+    - could you tell me more about safety risks
+    - explain me what safety risks does
+    - explain me what safety risks is
+    - how does safety risks work?
+    - how does safety risks work
+    - how does safety risks work?
+    - how safety risks works ?
+    - how works safety risks
+    - i dont get what safety risks is
+    - i havent understood yet what safety risks actually is
+    - i want to about safety risks
+    - i want to know about safety risks
+    - i want to know what safety risks does
+    - i want to learn something about safety risks
+    - so how does it all work?
+    - sorry tell me about safety risks
+    - tell me about safety risks
+    - tell me bout safety risks
+    - tell me more about safety risks
+    - tell me more about your company
+    - what are the componensts of safety risks
+    - what can I do with safety risks?
+    - what can i do with safety risks
+    - what does safety risks do
+    - what does safety risks do ?
+    - what does safety risks do?
+    - what does safety risks mean
+    - what is in safety risks
+    - what is it for?
+    - what is safety risks
+    - what is safety risks actually
+    - what is safety risks?
+    - whats safety risks
+    - yeah go on explaining what safety risks is
+    - what are the components of safety risks
+    - what is safety risks
+    - Can you brief me about safety risk
+    - Can you tell me more about safety risk?
+    - Can you tell me what safety risk does?
+    - Could you tell me more about safety risk?
+    - Give me more information about safety risk
+    - How does safety risk work?
+    - I want to know about safety rsik
+    - I want to know what safety risk actually does that isn't clear to me yet
+    - I want to learn what safety risk does
+    - I want to learn what safety risk is
+    - I would like to know about safety risk
+    - I would like to know more about your product
+    - OK can u brief me Abt safety risk
+    - safety risk?
+    - safety risk Is?
+    - WHAT IS IT
+    - WHAT IS safety risk
+    - What Is safety risk?
+    - What can safety risk do?
+    - What components does safety risk have?
+    - What exactly is safety risk?
+    - What is safety risk?
+    - What is safety risk doing exactly?
+    - What is safety risk?
+    - What's safety risk?
+    - can you explain safety risk?
+    - can you pls explain what safety risk does
+    - could you tell me more about safety risk
+    - explain me what safety risk does
+    - explain me what safety risk is
+    - how does safety risk work?
+    - how does safety risk work
+    - how does safety risk work?
+    - how safety risk works ?
+    - how works safety risk
+    - i dont get what safety risk is
+    - i havent understood yet what safety risk actually is
+    - i want to about safety risk
+    - i want to know about safety risk
+    - i want to know what safety risk does
+    - i want to learn something about safety risk
+    - so how does it all work?
+    - sorry tell me about safety risk
+    - tell me about safety risk
+    - tell me bout safety risk
+    - tell me more about safety risk
+    - tell me more about your company
+    - what are the componensts of safety risk
+    - what can I do with safety risk?
+    - what can i do with safety risk
+    - what does safety risk do
+    - what does safety risk do ?
+    - what does safety risk do?
+    - what does safety risk mean
+    - what is in safety risk
+    - what is it for?
+    - what is safety risk
+    - what is safety risk actually
+    - what is safety risk?
+    - whats safety risk
+    - yeah go on explaining what safety risk is
+    - what are the components of safety risk
+    - what is safety risk
+- intent: inform_incident
+  examples: |
+    - I was hurt by a blade
+    - I was hurt
+    - It hurt me
+    - I was hurt by a cutter
+- intent: inform_industry_type
+  examples: |
+    - [Mining](industry_type)
+    - [Metal](industry_type)
+    - [Chemical](industry_type)
+    - I work in [Mining](industry_type) industry
+    - I work in [Metal](industry_type) industry
+    - I work in [Chemical](industry_type) industry    
+- intent: inform_country
+  examples: |
+    - [Country_01](country)
+    - [Country_02](country)
+    - [Country_03](country)
+    - I am from [Country_01](country)
+    - I am from [Country_02](country)
+    - I am from [Country_03](country)
+    - I belong to [Country_01](country)
+    - I belong to [Country_02](country)
+    - I belong to [Country_03](country)              
+- intent: inform_location
+  examples: |
+    - [Local_01](location)
+    - [Local_02](location)
+    - [Local_03](location)
+    - [Local_04](location)
+    - [Local_05](location)
+    - [Local_06](location)
+    - [Local_07](location)
+    - [Local_08](location)
+    - [Local_09](location)
+    - [Local_10](location)
+    - [Local_11](location)
+    - [Local_12](location)
+    - Its in [Local_01](location)
+    - Its in [Local_02](location)
+    - Its in [Local_03](location)
+    - Its in [Local_04](location)
+    - Its in [Local_05](location)
+    - Its in [Local_06](location)
+    - Its in [Local_07](location)
+    - Its in [Local_08](location)
+    - Its in [Local_09](location)
+    - Its in [Local_10](location)
+    - Its in [Local_11](location)
+    - Its in [Local_12](location)                         
+- intent: restart
+  examples: |
+    - yep you can restart
+    - Please restart this chat/
+    - ok restart please
+    - please restart the bot
+    - restart this conversation
+    - i want to restart
+    - why don't you restart????
+    - hey, i said restart
+    - restart session pls
+    - restart ps
+- synonym: english
+  examples: |
+    - English
+    - en
+    - eng
+    - Eng
+    - ENGLISH
+- synonym: ' duration'
+  examples: |
+    - durations
+    - how long
+- synonym: USA
+  examples: |
+    - US
+    - United States
+    - U.S.
+    - usa
+- synonym: United Kingdom
+  examples: |
+    - UK
+    - U.K.
+- synonym: all
+  examples: |
+    - both

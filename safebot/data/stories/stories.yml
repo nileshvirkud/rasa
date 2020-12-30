@@ -1,0 +1,106 @@
+version: "2.0"
+stories:
+- story: thanks
+  steps:
+  - intent: thank
+  - action: utter_noworries
+  - action: utter_anything_else
+- story: bye
+  steps:
+  - intent: bye
+  - action: utter_goodbye
+- story: anything else? - yes
+  steps:
+  - action: utter_anything_else
+  - intent: affirm
+  - action: utter_what_help
+- story: anything else? - no
+  steps:
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_thumbsup
+- story: positive reaction
+  steps:
+  - intent: react_positive
+  - action: utter_react_positive
+- story: negative reaction
+  steps:
+  - intent: react_negative
+  - action: utter_react_negative
+- story: need help with a risks
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: need_help_broad
+  - action: utter_ask_more_details
+  - intent: how_to_get_started
+  - action: user_form
+  - active_loop: user_form
+  - intent: inform_industry_type
+  - action: utter_get_incident_description
+  - intent: inform_incident
+  - action: action_get_risktype
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: report incident
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: how_to_get_started
+  - action: user_form
+  - active_loop: user_form
+  - intent: inform_industry_type
+  - action: utter_get_incident_description
+  - intent: inform_incident
+  - action: action_get_risktype
+- story: report incident 2
+  steps:
+  - action: utter_get_incident_description
+  - intent: inform_incident
+  - action: action_get_risktype
+- story: howt to get started happypath
+  steps:
+  - intent: how_to_get_started
+  - action: user_form
+  - active_loop: user_form
+  - intent: inform_industry_type
+  - action: utter_get_incident_description
+  - intent: inform_incident
+  - action: action_get_risktype
+- story: howt to get started denypath
+  steps:
+  - intent: how_to_get_started
+  - action: user_form
+  - active_loop: user_form
+  - intent: deny
+  - action: utter_ask_continue_user_form
+- story: howt to get started chitchatpath
+  steps:
+  - intent: how_to_get_started
+  - action: user_form
+  - active_loop: user_form
+  - intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_continue_user_form  

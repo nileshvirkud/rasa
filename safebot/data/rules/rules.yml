@@ -1,0 +1,91 @@
+version: "2.0"
+
+rules:
+
+- rule: greet user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: bye
+  - action: utter_goodbye
+
+- rule: thanks
+  steps:
+  - intent: thank
+  - action: utter_noworries
+  - action: utter_anything_else
+
+# - rule: utter chitchat for chitchat
+#   steps:
+#   - intent: chitchat
+#   - action: utter_chitchat
+
+- rule: Implementation of the Two-Stage-Fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - active_loop: action_two_stage_fallback
+
+- rule: Activate user form
+  steps:
+  - intent: how_to_get_started
+  - action: user_form
+  - active_loop: user_form
+  - active_loop: null
+  - action: utter_get_incident_description
+
+- rule: deactivate user form
+  condition:
+  - active_loop: user_form
+  steps:
+  - active_loop: null
+  - action: utter_ask_more_details
+
+- rule: continue user form
+  condition:
+  - active_loop: user_form
+  steps:
+  - action: utter_ask_continue_user_form
+  - intent: affirm
+  - action: utter_great
+  - action: user_form
+  - active_loop: null
+  - action: utter_get_incident_description
+
+- rule: don't continue user form
+  condition:
+  - active_loop: user_form
+  steps:
+  - action: utter_ask_continue_user_form
+  - intent: deny
+  - action: utter_thumbsup
+  - action: action_deactivate_loop
+  - active_loop: null
+
+- rule: ask for more details
+  steps:
+  - intent: need_help_broad
+  - action: utter_ask_more_details
+
+- rule: react positive 
+  steps:
+  - intent: react_positive
+  - action: utter_react_positive
+
+- rule: negative reaction
+  steps:
+  - intent: react_negative
+  - action: utter_react_negative
+  
+- rule: user form -> need_help_broad -> deactivate loop
+  condition:
+  - active_loop: user_form
+  steps:
+  - intent: need_help_broad
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_ask_more_details
+

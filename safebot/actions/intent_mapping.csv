@@ -1,0 +1,23 @@
+name,intent_prompt
+chitchat, to really ask that
+affirm, yes
+next_step, next step
+thank, to thank
+mood_great, you are happy
+out_of_scope, ???
+canthelp, ???
+restart, to restart
+bye, to say bye
+human_handoff, to talk to a person
+inform_incident, to report incident
+deny, no
+react_negative, no
+inform_industry_type, to report industry type
+inform_country, to report country
+inform_location, to report location
+react_positive, yes
+greet, to say hi
+need_help_broad, you need more help
+explain, to elaborate
+mood_unhappy, you are unhappy
+how_to_get_started, to classify risks
