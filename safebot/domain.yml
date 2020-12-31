@@ -7,11 +7,11 @@ intents:
 - inform_location
 - deny
 - inform_industry_type
+- inform_gender
 - greet
 - bye
 - inform_incident
 - inform_country
-- inform gender
 - mood_great
 - out_of_scope:
     is_retrieval_intent: true
@@ -45,15 +45,15 @@ slots:
   industry_type:
     type: text
     influence_conversation: false
+  gender:
+    type: text
+    influence_conversation: false        
   location:
     type: text
     influence_conversation: false
   country:
     type: text
     influence_conversation: false
-  gender:
-    type: text
-    influence_conversation: false    
   feedback_value:
     type: categorical
     influence_conversation: true
@@ -150,17 +150,17 @@ responses:
   utter_ask_user_form_industry_type:
   - text: Which Industry do you work in?
   - text: Whats the Industry do you work in ?
-  utter_ask_user_form_location:
-  - text: Where is the Industry located ?
-  utter_ask_user_form_country:
-  - text: Which country do you belong?
   utter_ask_user_form_gender:
   - text: what is your gender?
     buttons:
     - title: "Male"
-      payload: "/inform_gender"
+      payload: "Male"
     - title: "Female"
-      payload: "/inform_gender"
+      payload: "Female"  
+  utter_ask_user_form_location:
+  - text: Where is the Industry located ?
+  utter_ask_user_form_country:
+  - text: Which country do you belong?
   utter_chitchat/ask_howbuilt:
   - text: I was built with a lot of love and patience.
   - text: Well, when two chatbots love each other very much...
@@ -234,6 +234,7 @@ actions:
 - utter_ask_more_details
 - utter_ask_user_form_country
 - utter_ask_user_form_industry_type
+- utter_ask_user_form_gender
 - utter_ask_user_form_location
 - utter_chitchat
 - utter_get_incident_description
@@ -246,13 +247,14 @@ forms:
     industry_type:
     - entity: industry_type
       type: from_entity
+    gender:
+    - entity: gender
+      type: from_entity      
     country:
     - entity: country
       type: from_entity
     location:
     - entity: location
       type: from_entity
-    gender:
-    - entity: gender
-      type: from_entity
+
 

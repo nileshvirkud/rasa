@@ -534,6 +534,7 @@ nlu:
     - Its in [Local_11](location)
     - Its in [Local_12](location)       
 - intent: inform_gender
+  examples: |
     - [Male](gender)
     - [Female](gender)
 - intent: restart
