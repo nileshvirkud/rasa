@@ -11,6 +11,7 @@ intents:
 - bye
 - inform_incident
 - inform_country
+- inform gender
 - mood_great
 - out_of_scope:
     is_retrieval_intent: true
