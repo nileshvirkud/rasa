@@ -83,7 +83,7 @@ class UserForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        return ["industry_type","location","country"]
+        return ["industry_type","location","country","gender"]
 
     
     def submit(
