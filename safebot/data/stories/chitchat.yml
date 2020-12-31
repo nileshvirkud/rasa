@@ -24,7 +24,49 @@ stories:
   - action: utter_greet
   - intent: chitchat
   - action: utter_chitchat
-- story: new to risk classification
+- story: happy path chitchat 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: chitchat
+  - action: utter_chitchat  
+- story: sad path 1 chitchat 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: chitchat
+  - action: utter_chitchat
+- story: happy path chitchat 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: chitchat
+  - action: utter_chitchat  
+  - intent: chitchat
+  - action: utter_chitchat   
+- story: sad path 1 chitchat 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: chitchat
+  - action: utter_chitchat  
+  - intent: chitchat
+  - action: utter_chitchat   
+- story: new to risk classification 1
   steps:
   - intent: greet
   - action: utter_greet
@@ -37,3 +79,54 @@ stories:
   - action: utter_get_incident_description
   - intent: inform_incident
   - action: action_get_risktype
+- story: new to risk classification 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy  
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: how_to_get_started
+  - action: user_form
+  - active_loop: user_form
+  - intent: inform_industry_type
+  - action: utter_get_incident_description
+  - intent: inform_incident
+  - action: action_get_risktype  
+- story: new to risk classification 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy  
+  - intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_continue_user_form   
+  - intent: how_to_get_started
+  - action: user_form
+  - active_loop: user_form
+  - intent: inform_industry_type
+  - action: utter_get_incident_description
+  - intent: inform_incident
+  - action: action_get_risktype    
+- story: new to risk classification 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy  
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: chitchat
+  - action: utter_chitchat  
+  - action: utter_ask_continue_user_form   
+  - intent: how_to_get_started
+  - action: user_form
+  - active_loop: user_form
+  - intent: inform_industry_type
+  - action: utter_get_incident_description
+  - intent: inform_incident
+  - action: action_get_risktype    
+      
+    

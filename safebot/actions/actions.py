@@ -19,6 +19,7 @@ from rasa_sdk.events import (
     EventType,
     FollowupAction,
 )
+import pickle
 
 # class ActionHelloWorld(Action):
 #
@@ -46,6 +47,32 @@ class ActionGetRiskType(Action):
         # This is incidnet"
 
         dispatcher.utter_message(text="This is the incident description : {0}".format(incident_description))
+
+        
+        # filename = 'predict_risk.pkl'
+        # pickle.dump(rf_grid_search, open(filename, 'wb'))
+        # loaded_model = pickle.load(open(filename, 'rb'))
+        # print(loaded_model)
+        # result = loaded_model.predict(X_Test_pca[[1]])
+        # print(result) 
+
+
+        # # get prediction  column cleaned data
+        # X_Test =data_val['cleaned_Description'].values
+        # y_Test =data_val['Critical Risk'].values
+        # #tokenize
+        # tokenizer.fit_on_texts(list(X_Test))
+        # # to sequences
+        # X_Test = tokenizer.texts_to_sequences(X_Test)
+        # X_Test = pad_sequences(X_Test, maxlen = maxlen)
+
+
+        # # scalar
+        # X_Test_sc = sc.transform(X_Test)
+        # # pca
+        # X_Test_pca = pca.transform(X_Test_sc)
+
+
 
         return []
 
