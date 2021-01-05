@@ -22,3 +22,5 @@ explain, to elaborate
 mood_unhappy, you are unhappy
 how_to_get_started, to classify risks
 inform_gender, to tell your gender
+inform_accident_level, to inform accident level
+inform_employee_type, to report employee type

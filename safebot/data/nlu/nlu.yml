@@ -51,7 +51,6 @@ nlu:
     - can I speak to a person?
     - can i please speak to a human?
     - can you forward me to your team
-    - can you please connect me to a real rasa employee?
     - can you put me in touch with a human?
     - do you have human support ?
     - gimme a proper human
@@ -69,8 +68,6 @@ nlu:
     - i want to talk to someone else
     - i want to talk to someone who is smarter than you
     - i would like to speak to a person
-    - i'd rather speak with a real rasa employee
-    - id like to talk to a real rasa employee
     - let me speak with a real person please
     - let me talk to a human
     - let me talk to a real person
@@ -537,10 +534,52 @@ nlu:
   examples: |
     - [Male](gender)
     - [Female](gender)
+- intent: inform_employee_type
+  examples: |
+    - [Employee](employee_type)
+    - [Third Party](employee_type)
+    - I am an [employee](employee_type)
+    - Its [Employee](employee_type)
+    - he is an [employee](employee_type)
+    - she is an [employee](employee_type)
+    - It is [employee](employee_type)
+    - that is [employee](employee_type)
+    - [Employee](employee_type) it is
+    - [Employee](employee_type) that is
+    - he is from [Third Party](employee_type)
+    - she is from [Third Party](employee_type)
+    - it is [Third Party](employee_type)
+    - thats from [Third Party](employee_type)
+    - that is from [Third Party](employee_type)
+    - they are from [Third Party](employee_type)
+    - he works for [Third Party](employee_type)
+    - she works for [Third Party](employee_type)
+    - she belongs to [Third Party](employee_type)
+    - he belongs to [Third Party](employee_type)
+- intent: inform_accident_level
+  examples: |
+    - [I](accident_level)
+    - [II](accident_level)
+    - [III](accident_level)
+    - [IV](accident_level)            
+    - [V](accident_level)            
+    - [VI](accident_level)
+    - It is [I](accident_level)
+    - It is [II](accident_level)
+    - It is [III](accident_level)
+    - It is [IV](accident_level)            
+    - It is [V](accident_level)            
+    - It is [VI](accident_level)  
+    - I guess its [I](accident_level)
+    - I guess its [II](accident_level)
+    - I guess its [III](accident_level)
+    - I guess its [IV](accident_level)            
+    - I guess its [V](accident_level)            
+    - I guess its [VI](accident_level)                      
 - intent: restart
   examples: |
     - yep you can restart
-    - Please restart this chat/
+    - Please restart this chat
     - ok restart please
     - please restart the bot
     - restart this conversation

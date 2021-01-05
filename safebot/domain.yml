@@ -8,10 +8,12 @@ intents:
 - deny
 - inform_industry_type
 - inform_gender
+- inform_employee_type
 - greet
 - bye
 - inform_incident
 - inform_country
+- inform_accident_level
 - mood_great
 - out_of_scope:
     is_retrieval_intent: true
@@ -41,19 +43,30 @@ entities:
 - name
 - user_type
 - gender
+- employee_type
+- accident_level
 slots:
   industry_type:
     type: text
     influence_conversation: false
   gender:
     type: text
-    influence_conversation: false        
+    influence_conversation: false
+  employee_type:
+    type: text
+    influence_conversation: false              
   location:
     type: text
     influence_conversation: false
   country:
     type: text
     influence_conversation: false
+  accident_level:
+    type: text
+    influence_conversation: false    
+  potential_accident_level:
+    type: text
+    influence_conversation: false        
   feedback_value:
     type: categorical
     influence_conversation: true
@@ -157,6 +170,43 @@ responses:
       payload: "Male"
     - title: "Female"
       payload: "Female"  
+  utter_ask_user_form_employee_type:
+  - text: what is the employee type?
+    buttons:
+    - title: "Employee"
+      payload: "Employee"
+    - title: "Third Party"
+      payload: "Third Party"
+  utter_ask_user_form_accident_level:
+  - text: what is the accident level?
+    buttons:
+    - title: "I"
+      payload: "I"
+    - title: "II"
+      payload: "II"    
+    - title: "III"
+      payload: "III"
+    - title: "IV"
+      payload: "IV"
+    - title: "V"
+      payload: "V"
+    - title: "VI"
+      payload: "VI"  
+  utter_ask_user_form_potential_accident_level:
+  - text: what is the potential accident level?
+    buttons:
+    - title: "I"
+      payload: "I"
+    - title: "II"
+      payload: "II"    
+    - title: "III"
+      payload: "III"
+    - title: "IV"
+      payload: "IV"
+    - title: "V"
+      payload: "V"
+    - title: "VI"
+      payload: "VI"                       
   utter_ask_user_form_location:
   - text: Where is the Industry located ?
   utter_ask_user_form_country:
@@ -235,7 +285,10 @@ actions:
 - utter_ask_user_form_country
 - utter_ask_user_form_industry_type
 - utter_ask_user_form_gender
+- utter_ask_user_form_employee_type
 - utter_ask_user_form_location
+- utter_ask_user_form_accident_level
+- utter_ask_user_form_potential_accident_level
 - utter_chitchat
 - utter_get_incident_description
 - utter_goodbye
@@ -250,11 +303,17 @@ forms:
     gender:
     - entity: gender
       type: from_entity      
+    employee_type:
+    - entity: employee_type
+      type: from_entity          
     country:
     - entity: country
       type: from_entity
     location:
     - entity: location
       type: from_entity
+    potential_accident_level:
+    - entity: accident_level
+      type: from_entity                 
 
 

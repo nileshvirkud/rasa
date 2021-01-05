@@ -15,7 +15,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 100
+    epochs: 50
   - name: EntitySynonymMapper
   - name: ResponseSelector
     retrieval_intent: out_of_scope
@@ -37,6 +37,6 @@ policies:
 # # See https://rasa.com/docs/rasa/policies for more information.
   - name: MemoizationPolicy
   - name: TEDPolicy
-    max_history: 10
+    max_history: 4
     epochs: 100
   - name: RulePolicy

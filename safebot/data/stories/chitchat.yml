@@ -4,6 +4,12 @@ stories:
   steps:
   - intent: chitchat
   - action: utter_chitchat
+- story: chitchat 2
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat  
+  - intent: chitchat
+  - action: utter_chitchat    
 - story: deny chitchat
   steps:
   - intent: chitchat
@@ -128,5 +134,46 @@ stories:
   - action: utter_get_incident_description
   - intent: inform_incident
   - action: action_get_risktype    
+- story: howt to get started happypath chitchat
+  steps:
+  - intent: how_to_get_started
+  - action: user_form
+  - active_loop: user_form
+  - active_loop: null
+  - action: utter_get_incident_description
+  - intent: inform_incident
+  - action: action_get_risktype 
+  - intent: chitchat
+  - action: utter_chitchat  
+- story: report incident 2 chitchat
+  steps:
+  - action: utter_get_incident_description
+  - intent: inform_incident
+  - action: action_get_risktype 
+  - intent: chitchat
+  - action: utter_chitchat
+- story: howt to get started happypath chitchat 2
+  steps:
+  - intent: how_to_get_started
+  - action: user_form
+  - active_loop: user_form
+  - active_loop: null
+  - action: utter_get_incident_description
+  - intent: inform_incident
+  - action: action_get_risktype 
+  - intent: chitchat
+  - action: utter_chitchat 
+  - intent: chitchat
+  - action: utter_chitchat   
+- story: report incident 2 chitchat 2
+  steps:
+  - action: utter_get_incident_description
+  - intent: inform_incident
+  - action: action_get_risktype 
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: chitchat
+  - action: utter_chitchat  
+        
       
     

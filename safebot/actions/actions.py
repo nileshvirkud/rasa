@@ -20,6 +20,9 @@ from rasa_sdk.events import (
     FollowupAction,
 )
 import pickle
+import pandas as pd
+from datetime import datetime
+
 
 # class ActionHelloWorld(Action):
 #
@@ -43,10 +46,22 @@ class ActionGetRiskType(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         incident_description = tracker.latest_message['text']
-        
+        indtype =tracker.get_slot("industry_type")
+
+        data = {
+        "Date" : [datetime.today().strftime('%Y-%m-%d')],
+        "Gender": [tracker.get_slot("gender")],
+        "Industry": [tracker.get_slot("industry_type")],
+        "Potential_Accident":[tracker.get_slot("potential_accident_level")],
+        "Emp_Type":  [tracker.get_slot("employee_type")]
+        # "Critical Risk":tracker.get_slot("critical_risk")
+        }
+
+        myvar = pd.DataFrame(data)
+
         # This is incidnet"
 
-        dispatcher.utter_message(text="This is the incident description : {0}".format(incident_description))
+        dispatcher.utter_message(text="This is the incident description : {0}".format(myvar['Emp_Type']))
 
         
         # filename = 'predict_risk.pkl'
@@ -83,7 +98,7 @@ class UserForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        return ["industry_type","location","country","gender"]
+        return ["industry_type","location","country","gender","employee_type","potential_accident_level"]
 
     
     def submit(
