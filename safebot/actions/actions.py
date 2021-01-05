@@ -46,22 +46,25 @@ class ActionGetRiskType(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         incident_description = tracker.latest_message['text']
-        indtype =tracker.get_slot("industry_type")
+   
 
         data = {
         "Date" : [datetime.today().strftime('%Y-%m-%d')],
-        "Gender": [tracker.get_slot("gender")],
+        "Countries": [tracker.get_slot("country")],
+        "Local":[tracker.get_slot("location")],
         "Industry": [tracker.get_slot("industry_type")],
         "Potential_Accident":[tracker.get_slot("potential_accident_level")],
-        "Emp_Type":  [tracker.get_slot("employee_type")]
-        # "Critical Risk":tracker.get_slot("critical_risk")
+        "Gender": [tracker.get_slot("gender")],
+        "Emp_Type":  [tracker.get_slot("employee_type")],
+        "Critical Risk":[tracker.get_slot("critical_risk")],
+        "Description":[tracker.latest_message['text']]
         }
 
         myvar = pd.DataFrame(data)
 
         # This is incidnet"
 
-        dispatcher.utter_message(text="This is the incident description : {0}".format(myvar['Emp_Type']))
+        dispatcher.utter_message(text="This is the incident description : {0}".format(myvar['Description']))
 
         
         # filename = 'predict_risk.pkl'
