@@ -162,7 +162,11 @@ responses:
   - text: Please describe the incident
   utter_ask_user_form_industry_type:
   - text: Which Industry do you work in?
-  - text: Whats the Industry do you work in ?
+    buttons:
+    - title: "Mining"
+      payload: "Mining"
+    - title: "Metal"
+      payload: "Metal"  
   utter_ask_user_form_gender:
   - text: what is your gender?
     buttons:
@@ -209,8 +213,40 @@ responses:
       payload: "VI"                       
   utter_ask_user_form_location:
   - text: Where is the Industry located ?
+    buttons:
+    - title: "Local_01"
+      payload: "Local_01"
+    - title: "Local_02"
+      payload: "Local_02"    
+    - title: "Local_03"
+      payload: "Local_03"
+    - title: "Local_04"
+      payload: "Local_04"
+    - title: "Local_05"
+      payload: "Local_05"
+    - title: "Local_06"
+      payload: "Local_06"    
+    - title: "Local_07"
+      payload: "Local_07"
+    - title: "Local_08"
+      payload: "Local_08"    
+    - title: "Local_09"
+      payload: "Local_09"
+    - title: "Local_10"
+      payload: "Local_10"
+    - title: "Local_11"
+      payload: "Local_11"
+    - title: "Local_12"
+      payload: "Local_12"            
   utter_ask_user_form_country:
   - text: Which country do you belong?
+    buttons:
+    - title: "Country_01"
+      payload: "Country_01"
+    - title: "Country_02"
+      payload: "Country_02"   
+    - title: "Country_03"
+      payload: "Country_03"         
   utter_chitchat/ask_howbuilt:
   - text: I was built with a lot of love and patience.
   - text: Well, when two chatbots love each other very much...
