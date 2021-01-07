@@ -112,18 +112,29 @@ nlu:
     - I want to know risk type
     - risk type
     - risks type
+    - accident level
+    - accident levels
     - show me risk type
     - can you explain risk type
     - what is risk type
+    - what is the accident level
     - what are the risks involved
     - whats the risk
+    - whats the accident level
     - tell me risk type
+    - tell me accident level
     - help me with risks type
     - help me with risk type
+    - help me with accident level
+    - help me with accident levels
     - can you help me to understand safety risks
     - can you tell me how to classify safety risks?
     - Can you shw me some information about safety risks?
-    - Can you tell me more about safety risk?
+    - Can you tell me more about accident level?
+    - can you help me to understand accident level
+    - can you tell me how to classify accident level?
+    - Can you shw me some information about accident level?
+    - Can you tell me more about accident level?    
     - Get started
     - Help me get started
     - Hi, how can i get started with 
@@ -132,8 +143,6 @@ nlu:
     - How can I get started with SafetyBot?
     - How can I get started with SafetyBot?
     - How can I get started?
-    - How do I download SafetyBot
-    - How do I download SafetyBot ?
     - How do I get started
     - How do I get started with SafetyBot?
     - How do I get started?
@@ -151,6 +160,7 @@ nlu:
     - I am [new](user_type)
     - I am [new](user_type) to SafetyBot
     - I like to classify risks
+    - I like to know accident level
     - I need to know if I can use SafetyBot to classify risks?
     - I want know about SafetyBot
     - I want to classify risks
@@ -160,6 +170,9 @@ nlu:
     - I want to know more about risk classification
     - I want to learn more about risk classification
     - I would like to know more about risk classification 
+    - I want to know more about accident level
+    - I want to learn more about accident level
+    - I would like to know more about accident level     
     - I'm [new](user_type)
     - I'm [new](user_type) in SafetyBot, help me!
     - I'm [new](user_type) to SafetyBot
@@ -200,25 +213,32 @@ nlu:
     - give me some information on SafetyBot
     - having trouble with SafetyBot
     - help me classify risks
+    - help me with accident levels
     - help me get started
     - help with SafetyBot
     - hi can you help me classify risks
     - hi, can you help in understanding risks
+    - hi, can you help in understanding accident levels
     - how about SafetyBot
     - how about classifying risks
     - how can I classify risks
     - how can I get started
     - how can I get started?
     - how can I learn risk classification
+    - how can I learn accident levels  
     - how can i classify risk
+    - how can i know accident level
     - how can i get started with risk classification?
     - how can i get started with risk classification
+    - how can i get started with accident level?
+    - how can i get started with accident level   
     - how can i get started?
     - how can i start
     - how can i start with risk classification ?
     - how cna i get started with risk classification
     - how do I classify risks?
     - how do I get risk classification
+    - how do I get accident level 
     - how do I get started
     - how do I get started with risks classification
     - how do I get started with accident level
@@ -227,6 +247,8 @@ nlu:
     - how do I use SafetyBot
     - how do i classify risks
     - how do i classify risks?
+    - how do i know accident levels
+    - how do i know accident levels?    
     - how do i classify a safe risks?
     - how do i classify a safety risk ?
     - how do i get classification
@@ -310,7 +332,9 @@ nlu:
     - pls explain how to get started
     - risks classification  
     - accident level  
+    - accident levels      
     - potential accident level  
+    - potential accident levels      
     - so, how do I use SafetyBot?
     - start SafetyBot
     - tell me about SafetyBot 
@@ -319,6 +343,7 @@ nlu:
     - tell me about risks classification please
     - tell me about risks classification
     - tell me about the accident level
+    - tell me about the accident levels
     - tell me about the different classes of risks
     - tell me how i can get started with SafetyBot
     - tell me how to get started with risk classification
@@ -334,6 +359,7 @@ nlu:
     - what accident level
     - what about accident level?
     - what are your features ?
+    - what is accident level
     - what is accident level
     - what is the best place to get started?
     - what is this risks class thing?

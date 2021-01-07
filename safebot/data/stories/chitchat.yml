@@ -136,7 +136,7 @@ stories:
   - action: action_get_risktype    
 - story: howt to get started happypath chitchat
   steps:
-  - intent: how_to_get_started
+  - intent: how_to_get_started 
   - action: user_form
   - active_loop: user_form
   - active_loop: null
@@ -154,7 +154,7 @@ stories:
   - action: utter_chitchat
 - story: howt to get started happypath chitchat 2
   steps:
-  - intent: how_to_get_started
+  - intent: how_to_get_started 
   - action: user_form
   - active_loop: user_form
   - active_loop: null

@@ -99,7 +99,7 @@ responses:
   - text: For now that's all I can do, so feel free to try it out. If you have any
       suggestions for what I should learn, let me know!
   utter_getstarted:
-  - text: To determine how I can help you best, I'm going to ask you a few questions.
+  - text: To tell you about the accident level, I'm going to ask you a few questions.
   utter_getstarted_new:
   - text: I see you’re new, let me ask you a quick question to determine how best
       I can help you.
@@ -162,7 +162,7 @@ responses:
   - text: Awesome! 🎉
   - text: Cool, let's do it 🚀
   utter_get_incident_description:
-  - text: Please describe the incident
+  - text: I got all the information.Please describe the incident and I will tell you the accident level.
   utter_ask_user_form_industry_type:
   - buttons:
     - payload: Mining
@@ -176,7 +176,7 @@ responses:
       title: Male
     - payload: Female
       title: Female
-    text: what is your gender?
+    text: what is the gender?
   utter_ask_user_form_employee_type:
   - buttons:
     - payload: Employee
@@ -240,7 +240,7 @@ responses:
       title: Local_11
     - payload: Local_12
       title: Local_12
-    text: Where is the Industry located ?
+    text: Where is the Location ?
   utter_ask_user_form_country:
   - buttons:
     - payload: Country_01
@@ -251,7 +251,32 @@ responses:
       title: Country_03
     text: Which country do you belong?
   utter_ask_user_form_critical_risk:
-  - text: What is the critical risk?
+  - buttons:
+    - payload: Venomous Animals
+      title: Venomous Animals
+    - payload: Burn
+      title: Burn
+    - payload: Projection
+      title: Projection
+    - payload: Fall
+      title: Fall
+    - payload: Electrical installation
+      title: Electrical installation
+    - payload: Chemical substances
+      title: Chemical substances
+    - payload: Liquid Metal
+      title: Liquid Metal
+    - payload: Pressed
+      title: Pressed
+    - payload: Individual protection equipment
+      title: Individual protection equipment
+    - payload: Traffic
+      title: Traffic
+    - payload: Vehicles and Mobile Equipment
+      title: Vehicles and Mobile Equipment
+    - payload: Others
+      title: Others
+    text: What is the critical risk?  
   utter_chitchat/ask_howbuilt:
   - text: I was built with a lot of love and patience.
   - text: Well, when two chatbots love each other very much...
