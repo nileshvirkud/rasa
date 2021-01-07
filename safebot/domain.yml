@@ -1,4 +1,3 @@
-version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -16,10 +15,8 @@ intents:
 - inform_accident_level
 - inform_critical_risk
 - mood_great
-- out_of_scope:
-    is_retrieval_intent: true
-- chitchat:
-    is_retrieval_intent: true
+- out_of_scope
+- chitchat
 - affirm
 - mood_unhappy
 - bot_challenge
@@ -56,7 +53,7 @@ slots:
     influence_conversation: false
   employee_type:
     type: text
-    influence_conversation: false              
+    influence_conversation: false
   location:
     type: text
     influence_conversation: false
@@ -65,13 +62,13 @@ slots:
     influence_conversation: false
   accident_level:
     type: text
-    influence_conversation: false    
+    influence_conversation: false
   potential_accident_level:
     type: text
-    influence_conversation: false        
+    influence_conversation: false
   critical_risk:
     type: text
-    influence_conversation: false        
+    influence_conversation: false
   feedback_value:
     type: categorical
     influence_conversation: true
@@ -99,11 +96,13 @@ responses:
   utter_out_of_scope:
   - text: I can't help you with that, I'm sorry.
   utter_nohelp:
-  - text: For now that's all I can do, so feel free to try it out. If you have any suggestions for what I should learn, let me know!
+  - text: For now that's all I can do, so feel free to try it out. If you have any
+      suggestions for what I should learn, let me know!
   utter_getstarted:
   - text: To determine how I can help you best, I'm going to ask you a few questions.
   utter_getstarted_new:
-  - text: I see you’re new, let me ask you a quick question to determine how best I can help you.
+  - text: I see you’re new, let me ask you a quick question to determine how best
+      I can help you.
   utter_first_classificaion:
   - text: Let's go. Are you new to risks classification?
   utter_noworries:
@@ -132,16 +131,14 @@ responses:
   - text: Could you be more specific?
   - text: Can you tell me more?
   utter_possibilities:
-  - text: |
-      You can ask me about:
-      - how to classify risks
-      - the risk classes,
-      - accident level 
-      - potential accident level 
+  - text: "You can ask me about:\n- how to classify risks\n- the risk classes,\n-\
+      \ accident level \n- potential accident level \n"
   utter_not_sure:
   - text: Hmm, not sure what you mean...
   utter_canthelp:
-  - text: I'm sorry I couldn't help you. If you have general questions about SafetyBot, please visit out webpage, otherwise contact us at [hi@safetybot.com] (mailto:hi@safetybot.com) for anything else.
+  - text: I'm sorry I couldn't help you. If you have general questions about SafetyBot,
+      please visit out webpage, otherwise contact us at [hi@safetybot.com] (mailto:hi@safetybot.com)
+      for anything else.
   utter_restart_with_button:
   - buttons:
     - payload: /restart
@@ -152,12 +149,13 @@ responses:
   utter_default:
   - text: Sorry, I didn't get that 🤷. Could you please rephrase?
   - text: I didn't understand, could you rephrase that?
-  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you just said?
+  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you
+      just said?
   - text: I'm afraid I didn't get what you just said. Could you rephrase that?
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_ask_continue_user_form:
-  - text: Do you still want to classify risks/ know actident level?  
+  - text: Do you still want to classify risks/ know actident level?
   utter_great:
   - text: Great! 👍
   - text: That's great! 🙌
@@ -166,94 +164,94 @@ responses:
   utter_get_incident_description:
   - text: Please describe the incident
   utter_ask_user_form_industry_type:
-  - text: Which Industry do you work in?
-    buttons:
-    - title: "Mining"
-      payload: "Mining"
-    - title: "Metal"
-      payload: "Metal"  
+  - buttons:
+    - payload: Mining
+      title: Mining
+    - payload: Metal
+      title: Metal
+    text: Which Industry do you work in?
   utter_ask_user_form_gender:
-  - text: what is your gender?
-    buttons:
-    - title: "Male"
-      payload: "Male"
-    - title: "Female"
-      payload: "Female"  
+  - buttons:
+    - payload: Male
+      title: Male
+    - payload: Female
+      title: Female
+    text: what is your gender?
   utter_ask_user_form_employee_type:
-  - text: what is the employee type?
-    buttons:
-    - title: "Employee"
-      payload: "Employee"
-    - title: "Third Party"
-      payload: "Third Party"
+  - buttons:
+    - payload: Employee
+      title: Employee
+    - payload: Third Party
+      title: Third Party
+    text: what is the employee type?
   utter_ask_user_form_accident_level:
-  - text: what is the accident level?
-    buttons:
-    - title: "I"
-      payload: "I"
-    - title: "II"
-      payload: "II"    
-    - title: "III"
-      payload: "III"
-    - title: "IV"
-      payload: "IV"
-    - title: "V"
-      payload: "V"
-    - title: "VI"
-      payload: "VI"  
+  - buttons:
+    - payload: I
+      title: I
+    - payload: II
+      title: II
+    - payload: III
+      title: III
+    - payload: IV
+      title: IV
+    - payload: V
+      title: V
+    - payload: VI
+      title: VI
+    text: what is the accident level?
   utter_ask_user_form_potential_accident_level:
-  - text: what is the potential accident level?
-    buttons:
-    - title: "I"
-      payload: "I"
-    - title: "II"
-      payload: "II"    
-    - title: "III"
-      payload: "III"
-    - title: "IV"
-      payload: "IV"
-    - title: "V"
-      payload: "V"
-    - title: "VI"
-      payload: "VI"                       
+  - buttons:
+    - payload: I
+      title: I
+    - payload: II
+      title: II
+    - payload: III
+      title: III
+    - payload: IV
+      title: IV
+    - payload: V
+      title: V
+    - payload: VI
+      title: VI
+    text: what is the potential accident level?
   utter_ask_user_form_location:
-  - text: Where is the Industry located ?
-    buttons:
-    - title: "Local_01"
-      payload: "Local_01"
-    - title: "Local_02"
-      payload: "Local_02"    
-    - title: "Local_03"
-      payload: "Local_03"
-    - title: "Local_04"
-      payload: "Local_04"
-    - title: "Local_05"
-      payload: "Local_05"
-    - title: "Local_06"
-      payload: "Local_06"    
-    - title: "Local_07"
-      payload: "Local_07"
-    - title: "Local_08"
-      payload: "Local_08"    
-    - title: "Local_09"
-      payload: "Local_09"
-    - title: "Local_10"
-      payload: "Local_10"
-    - title: "Local_11"
-      payload: "Local_11"
-    - title: "Local_12"
-      payload: "Local_12"            
+  - buttons:
+    - payload: Local_01
+      title: Local_01
+    - payload: Local_02
+      title: Local_02
+    - payload: Local_03
+      title: Local_03
+    - payload: Local_04
+      title: Local_04
+    - payload: Local_05
+      title: Local_05
+    - payload: Local_06
+      title: Local_06
+    - payload: Local_07
+      title: Local_07
+    - payload: Local_08
+      title: Local_08
+    - payload: Local_09
+      title: Local_09
+    - payload: Local_10
+      title: Local_10
+    - payload: Local_11
+      title: Local_11
+    - payload: Local_12
+      title: Local_12
+    text: Where is the Industry located ?
   utter_ask_user_form_country:
-  - text: Which country do you belong?
-    buttons:
-    - title: "Country_01"
-      payload: "Country_01"
-    - title: "Country_02"
-      payload: "Country_02"   
-    - title: "Country_03"
-      payload: "Country_03" 
+  - buttons:
+    - payload: Country_01
+      title: Country_01
+    - payload: Country_02
+      title: Country_02
+    - payload: Country_03
+      title: Country_03
+    text: Which country do you belong?
   utter_ask_user_form_critical_risk:
-  - text: What is the critical risk?              
+  - text: What is the critical risk?
   utter_chitchat/ask_howbuilt:
   - text: I was built with a lot of love and patience.
   - text: Well, when two chatbots love each other very much...
@@ -268,7 +266,8 @@ responses:
   utter_chitchat/ask_howold:
   - text: Old enough to be a bot!
   - text: '42'
-  - text: Age is just an issue of mind over matter. If you don’t mind, it doesn’t matter.
+  - text: Age is just an issue of mind over matter. If you don’t mind, it doesn’t
+      matter.
   - text: My first git commit was many moons ago.
   - text: Why do you ask? Are my wrinkles showing?
   - text: I've hit the age where I actively try to forget how old I am.
@@ -282,7 +281,8 @@ responses:
   utter_chitchat/ask_restaurant:
   - text: I'm sorry, I can't recommend you a restaurant as I usually cook at home.
   - text: I'm sorry, I'm not getting taste buds for another few updates.
-  - text: I'd need some more data. If you lick the monitor perhaps I can evaluate your taste buds.
+  - text: I'd need some more data. If you lick the monitor perhaps I can evaluate
+      your taste buds.
   utter_chitchat/ask_time:
   - text: It's the most wonderful time of the year!
   - text: It's party time!
@@ -291,7 +291,8 @@ responses:
   - text: "In an ever expanding universe, the real question is: what time isn't it?"
   - text: That's hard to say -- it's different all over the world!
   utter_chitchat/ask_languagesbot:
-  - text: I can spell baguette in French, but unfortunately English is the only language I can answer you in.
+  - text: I can spell baguette in French, but unfortunately English is the only language
+      I can answer you in.
   - text: I am in the process of learning, but at the moment I can only speak English.
   - text: Binary code and the language of love. And English.
   - text: I was written in Python, but for your convenience I'll translate to English.
@@ -306,7 +307,8 @@ responses:
   - text: Believe it or not, I actually am not spying on your personal information.
   - text: You're the second person now to ask me that. Rihanna was the first.
   utter_chitchat/ask_whatspossible:
-  - text: I can help you classify safety risks and also predict the potential accident severity.
+  - text: I can help you classify safety risks and also predict the potential accident
+      severity.
   utter_chitchat/ask_wherefrom:
   - text: I was born in India, but I consider myself a citizen of the world.
   - text: My developers come from India
@@ -315,7 +317,8 @@ responses:
   utter_chitchat/ask_whoami:
   - text: I hope you are being yourself.
   - text: Who do you think you are?
-  - text: Unfortunately I haven't been programmed with the amount of necessary philosophy knowledge to answer that.
+  - text: Unfortunately I haven't been programmed with the amount of necessary philosophy
+      knowledge to answer that.
   utter_out_of_scope/non_english:
   - text: I only understand English, I'm sorry.
   utter_out_of_scope/other:
@@ -341,26 +344,24 @@ actions:
 - utter_out_of_scope
 forms:
   user_form:
-    industry_type:
-    - entity: industry_type
+    country:
+    - entity: country
+      type: from_entity
+    critical_risk:
+    - entity: critical_risk
+      type: from_entity
+    employee_type:
+    - entity: employee_type
       type: from_entity
     gender:
     - entity: gender
-      type: from_entity      
-    employee_type:
-    - entity: employee_type
-      type: from_entity          
-    country:
-    - entity: country
+      type: from_entity
+    industry_type:
+    - entity: industry_type
       type: from_entity
     location:
     - entity: location
       type: from_entity
     potential_accident_level:
     - entity: accident_level
-      type: from_entity                 
-    critical_risk:
-    - entity: critical_risk
-      type: from_entity                 
-
-
+      type: from_entity

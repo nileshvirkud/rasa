@@ -7,6 +7,14 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+sys.path.append('C:\\Users\\niles\\OneDrive\\Learn\\rasa\\safebot\\predictions')
+sys.path.append('C:\\Users\\niles\\OneDrive\\Learn\\rasa\\safebot\\actions')
+# print(sys.path)
+from prediction import Predictions
+from actions import *
+
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -22,8 +30,19 @@ from rasa_sdk.events import (
 import pickle
 import pandas as pd
 from datetime import datetime
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+import os
+from sklearn.base import BaseEstimator,TransformerMixin
+import pandas as pd
+import pickle
+from sklearn.decomposition import PCA
+import os, sys
+############################################################################################################################
 
 
+
+#############################################################################################################################
 # class ActionHelloWorld(Action):
 #
 #     def name(self) -> Text:
@@ -44,11 +63,8 @@ class ActionGetRiskType(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        incident_description = tracker.latest_message['text']
    
-
-        data = {
+        myvar = {
         "Date" : [datetime.today().strftime('%Y-%m-%d')],
         "Countries": [tracker.get_slot("country")],
         "Local":[tracker.get_slot("location")],
@@ -60,37 +76,10 @@ class ActionGetRiskType(Action):
         "Description":[tracker.latest_message['text']]
         }
 
-        myvar = pd.DataFrame(data)
-
-        # This is incidnet"
-
-        dispatcher.utter_message(text="This is the incident description : {0}".format(myvar['Description']))
-
-        
-        # filename = 'predict_risk.pkl'
-        # pickle.dump(rf_grid_search, open(filename, 'wb'))
-        # loaded_model = pickle.load(open(filename, 'rb'))
-        # print(loaded_model)
-        # result = loaded_model.predict(X_Test_pca[[1]])
-        # print(result) 
-
-
-        # # get prediction  column cleaned data
-        # X_Test =data_val['cleaned_Description'].values
-        # y_Test =data_val['Critical Risk'].values
-        # #tokenize
-        # tokenizer.fit_on_texts(list(X_Test))
-        # # to sequences
-        # X_Test = tokenizer.texts_to_sequences(X_Test)
-        # X_Test = pad_sequences(X_Test, maxlen = maxlen)
-
-
-        # # scalar
-        # X_Test_sc = sc.transform(X_Test)
-        # # pca
-        # X_Test_pca = pca.transform(X_Test_sc)
-
-
+        p1 = Predictions(myvar)
+                
+        dispatcher.utter_message(text="The predicted accident level is : {0}".format(p1.predict()))
+        # dispatcher.utter_message(text="The predicted accident level is : {0}".format(ctext))
 
         return []
 
