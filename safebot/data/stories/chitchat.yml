@@ -79,6 +79,7 @@ stories:
   - intent: chitchat
   - action: utter_chitchat
   - intent: how_to_get_started
+  - action: utter_getstarted
   - action: user_form
   - active_loop: user_form
   - active_loop: null
@@ -94,6 +95,7 @@ stories:
   - intent: chitchat
   - action: utter_chitchat
   - intent: how_to_get_started
+  - action: utter_getstarted
   - action: user_form
   - active_loop: user_form
   - active_loop: null
@@ -108,8 +110,9 @@ stories:
   - action: utter_happy  
   - intent: chitchat
   - action: utter_chitchat
-  - action: utter_ask_continue_user_form   
+  # - action: utter_ask_continue_user_form   
   - intent: how_to_get_started
+  - action: utter_getstarted
   - action: user_form
   - active_loop: user_form
   - active_loop: null
@@ -126,8 +129,9 @@ stories:
   - action: utter_chitchat
   - intent: chitchat
   - action: utter_chitchat  
-  - action: utter_ask_continue_user_form   
+  # - action: utter_ask_continue_user_form   
   - intent: how_to_get_started
+  - action: utter_getstarted
   - action: user_form
   - active_loop: user_form
   - active_loop: null
@@ -136,7 +140,8 @@ stories:
   - action: action_get_risktype    
 - story: howt to get started happypath chitchat
   steps:
-  - intent: how_to_get_started 
+  - intent: how_to_get_started
+  - action: utter_getstarted 
   - action: user_form
   - active_loop: user_form
   - active_loop: null
@@ -154,7 +159,8 @@ stories:
   - action: utter_chitchat
 - story: howt to get started happypath chitchat 2
   steps:
-  - intent: how_to_get_started 
+  - intent: how_to_get_started
+  - action: utter_getstarted 
   - action: user_form
   - active_loop: user_form
   - active_loop: null

@@ -162,7 +162,8 @@ responses:
   - text: Awesome! 🎉
   - text: Cool, let's do it 🚀
   utter_get_incident_description:
-  - text: I got all the information.Please describe the incident and I will tell you the accident level.
+  - text: I got all the information.Please describe the incident and I will tell you
+      the accident level.
   utter_ask_user_form_industry_type:
   - buttons:
     - payload: Mining
@@ -276,7 +277,7 @@ responses:
       title: Vehicles and Mobile Equipment
     - payload: Others
       title: Others
-    text: What is the critical risk?  
+    text: What is the critical risk?
   utter_chitchat/ask_howbuilt:
   - text: I was built with a lot of love and patience.
   - text: Well, when two chatbots love each other very much...

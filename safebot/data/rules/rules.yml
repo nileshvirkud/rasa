@@ -18,10 +18,10 @@ rules:
   - action: utter_noworries
   - action: utter_anything_else
 
-# - rule: utter chitchat for chitchat
-#   steps:
-#   - intent: chitchat
-#   - action: utter_chitchat
+- rule: utter chitchat for chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
 
 - rule: Implementation of the Two-Stage-Fallback
   steps:
@@ -32,6 +32,7 @@ rules:
 - rule: Activate user form
   steps:
   - intent: how_to_get_started
+  - action: utter_getstarted
   - action: user_form
   - active_loop: user_form
   - active_loop: null
