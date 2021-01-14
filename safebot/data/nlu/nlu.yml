@@ -939,10 +939,11 @@ nlu:
 - intent: inform_industry_type
   examples: |
     - [Mining](industry_type)
-    - [Metal](industry_type)
+    - [Metals](industry_type)
+    - [Others](industry_type)    
     - [Chemical](industry_type)
     - I work in [Mining](industry_type) industry
-    - I work in [Metal](industry_type) industry
+    - I work in [Metals](industry_type) industry
     - I work in [Chemical](industry_type) industry    
 - intent: inform_country
   examples: |

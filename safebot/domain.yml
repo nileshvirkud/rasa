@@ -168,8 +168,10 @@ responses:
   - buttons:
     - payload: Mining
       title: Mining
-    - payload: Metal
-      title: Metal
+    - payload: Metals
+      title: Metals
+    - payload: Others
+      title: Others
     text: Which Industry do you work in?
   utter_ask_user_form_gender:
   - buttons:
