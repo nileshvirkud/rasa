@@ -1,0 +1,8 @@
+
+https://www.codeproject.com/Questions/5251404/Failed-to-load-native-tensorflow-runtime-fix
+
+conda create -n tensorflow_cpu pip python=3.6
+activate tensorflow_cpu
+pip install --ignore-installed --upgrade tensorflow==1.9
+pip install pandas
+conda install -c conda-forge pyplot
