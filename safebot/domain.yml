@@ -10,7 +10,6 @@ intents:
 - inform_employee_type
 - greet
 - bye
-- inform_incident
 - inform_country
 - inform_accident_level
 - inform_critical_risk
@@ -67,6 +66,9 @@ slots:
     type: text
     influence_conversation: false
   critical_risk:
+    type: text
+    influence_conversation: false
+  incident_description:
     type: text
     influence_conversation: false
   feedback_value:
@@ -161,9 +163,8 @@ responses:
   - text: That's great! 🙌
   - text: Awesome! 🎉
   - text: Cool, let's do it 🚀
-  utter_get_incident_description:
-  - text: I got all the information.Please describe the incident and I will tell you
-      the accident level.
+  utter_ask_user_form_incident_description:
+  - text: Please describe the incident.
   utter_ask_user_form_industry_type:
   - buttons:
     - payload: Mining
@@ -365,7 +366,7 @@ actions:
 - utter_ask_user_form_potential_accident_level
 - utter_ask_user_form_critical_risk
 - utter_chitchat
-- utter_get_incident_description
+- utter_ask_user_form_incident_description
 - utter_goodbye
 - utter_greet
 - utter_happy
@@ -384,6 +385,8 @@ forms:
     gender:
     - entity: gender
       type: from_entity
+    incident_description:
+    - type: from_text
     industry_type:
     - entity: industry_type
       type: from_entity

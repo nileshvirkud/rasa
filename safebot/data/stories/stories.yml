@@ -38,8 +38,6 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype
 - story: happy path
   steps:
@@ -74,13 +72,9 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype
 - story: report incident 2
   steps:
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype
 - story: howt to get started happypath
   steps:
@@ -89,8 +83,6 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype
 - story: howt to get started denypath
   steps:

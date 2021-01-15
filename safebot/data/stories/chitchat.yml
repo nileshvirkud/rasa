@@ -83,8 +83,6 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype
 - story: new to risk classification 2
   steps:
@@ -99,8 +97,6 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype  
 - story: new to risk classification 3
   steps:
@@ -110,14 +106,11 @@ stories:
   - action: utter_happy  
   - intent: chitchat
   - action: utter_chitchat
-  # - action: utter_ask_continue_user_form   
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: user_form
   - active_loop: user_form
   - active_loop: null
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype    
 - story: new to risk classification 4
   steps:
@@ -128,15 +121,12 @@ stories:
   - intent: chitchat
   - action: utter_chitchat
   - intent: chitchat
-  - action: utter_chitchat  
-  # - action: utter_ask_continue_user_form   
+  - action: utter_chitchat   
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: user_form
   - active_loop: user_form
   - active_loop: null
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype    
 - story: howt to get started happypath chitchat
   steps:
@@ -145,15 +135,11 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype 
   - intent: chitchat
   - action: utter_chitchat  
 - story: report incident 2 chitchat
   steps:
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype 
   - intent: chitchat
   - action: utter_chitchat
@@ -164,8 +150,6 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype 
   - intent: chitchat
   - action: utter_chitchat 
@@ -173,8 +157,6 @@ stories:
   - action: utter_chitchat   
 - story: report incident 2 chitchat 2
   steps:
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype 
   - intent: chitchat
   - action: utter_chitchat

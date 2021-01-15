@@ -73,7 +73,8 @@ class ActionGetRiskType(Action):
         "Gender": [tracker.get_slot("gender")],
         "Emp_Type":  [tracker.get_slot("employee_type")],
         "Critical Risk":[tracker.get_slot("critical_risk")],
-        "Description":[tracker.latest_message['text']]
+        "Description":[tracker.get_slot('incident_description')]
+        # "Description":[tracker.latest_message['text']]
         }
 
         p1 = Predictions(myvar)
@@ -90,7 +91,7 @@ class UserForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        return ["industry_type","location","country","gender","employee_type","potential_accident_level"]
+        return ["industry_type","location","country","gender","employee_type","potential_accident_level","incident_description","critical_risk"]
 
     
     def submit(
@@ -100,7 +101,8 @@ class UserForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
 
-        dispatcher.utter_message(template="utter_get_incident_description")
+        # dispatcher.utter_message(template="utter_get_incident_description")
+        dispatcher.utter_message(text="I have got all the information I needed.I will tell you the accident level ")        
         return []
 
 

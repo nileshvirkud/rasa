@@ -36,7 +36,7 @@ rules:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
-  - action: utter_get_incident_description
+  - action: action_get_risktype
 
 - rule: deactivate user form
   condition:
@@ -54,7 +54,7 @@ rules:
   - action: utter_great
   - action: user_form
   - active_loop: null
-  - action: utter_get_incident_description
+  - action: action_get_risktype
 
 - rule: don't continue user form
   condition:

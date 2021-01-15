@@ -21,6 +21,4 @@ stories:
   - action: user_form
   - active_loop: user_form
   - active_loop: null
-  - action: utter_get_incident_description
-  - intent: inform_incident
   - action: action_get_risktype
