@@ -68,7 +68,7 @@ slots:
   critical_risk:
     type: text
     influence_conversation: false
-  incident_description:
+  zincident_description:
     type: text
     influence_conversation: false
   feedback_value:
@@ -133,8 +133,7 @@ responses:
   - text: Could you be more specific?
   - text: Can you tell me more?
   utter_possibilities:
-  - text: "You can ask me about:\n- how to classify risks\n- the risk classes,\n-\
-      \ accident level \n- potential accident level \n"
+  - text: "You can ask me about:\n- accident levels \n- Queries on risk data,\n"
   utter_not_sure:
   - text: Hmm, not sure what you mean...
   utter_canthelp:
@@ -163,7 +162,7 @@ responses:
   - text: That's great! 🙌
   - text: Awesome! 🎉
   - text: Cool, let's do it 🚀
-  utter_ask_user_form_incident_description:
+  utter_ask_user_form_zincident_description:
   - text: Please describe the incident.
   utter_ask_user_form_industry_type:
   - buttons:
@@ -244,7 +243,7 @@ responses:
       title: Local_11
     - payload: Local_12
       title: Local_12
-    text: Where is the Location ?
+    text: What is the Location ?
   utter_ask_user_form_country:
   - buttons:
     - payload: Country_01
@@ -366,7 +365,7 @@ actions:
 - utter_ask_user_form_potential_accident_level
 - utter_ask_user_form_critical_risk
 - utter_chitchat
-- utter_ask_user_form_incident_description
+- utter_ask_user_form_zincident_description
 - utter_goodbye
 - utter_greet
 - utter_happy
@@ -385,8 +384,6 @@ forms:
     gender:
     - entity: gender
       type: from_entity
-    incident_description:
-    - type: from_text
     industry_type:
     - entity: industry_type
       type: from_entity
@@ -396,3 +393,5 @@ forms:
     potential_accident_level:
     - entity: accident_level
       type: from_entity
+    zincident_description:
+    - type: from_text

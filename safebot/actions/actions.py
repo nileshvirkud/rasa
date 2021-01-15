@@ -9,8 +9,10 @@
 
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
-sys.path.append('C:\\Users\\niles\\OneDrive\\Learn\\rasa\\safebot\\predictions')
-sys.path.append('C:\\Users\\niles\\OneDrive\\Learn\\rasa\\safebot\\actions')
+# sys.path.append('C:\\Users\\niles\\OneDrive\\Learn\\rasa\\safebot\\predictions')
+# sys.path.append('C:\\Users\\niles\\OneDrive\\Learn\\rasa\\safebot\\actions')
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + '\\predictions')
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + '\\actions')
 # print(sys.path)
 from prediction import Predictions
 from actions import *
@@ -73,13 +75,13 @@ class ActionGetRiskType(Action):
         "Gender": [tracker.get_slot("gender")],
         "Emp_Type":  [tracker.get_slot("employee_type")],
         "Critical Risk":[tracker.get_slot("critical_risk")],
-        "Description":[tracker.get_slot('incident_description')]
+        "Description":[tracker.get_slot('zincident_description')]
         # "Description":[tracker.latest_message['text']]
         }
 
         p1 = Predictions(myvar)
                 
-        dispatcher.utter_message(text="The predicted accident level is : {0}".format(p1.predict()))
+        dispatcher.utter_message(text="The accident level based on the data you provided is : {0}".format(p1.predict()))
         # dispatcher.utter_message(text="The predicted accident level is : {0}".format(ctext))
 
         return []
@@ -91,7 +93,7 @@ class UserForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        return ["industry_type","location","country","gender","employee_type","potential_accident_level","incident_description","critical_risk"]
+        return ["industry_type","location","country","gender","employee_type","potential_accident_level","zincident_description","critical_risk"]
 
     
     def submit(
@@ -101,8 +103,9 @@ class UserForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
 
-        # dispatcher.utter_message(template="utter_get_incident_description")
-        dispatcher.utter_message(text="I have got all the information I needed.I will tell you the accident level ")        
+        # dispatcher.utter_message(template="utter_get_zincident_description")
+        dispatcher.utter_message(text = "I have got all the information I needed.I will tell you the accident level ")
+
         return []
 
 
@@ -113,9 +116,10 @@ class ActionDefaultAskAffirmation(Action):
        return "action_default_ask_affirmation"
 
    def __init__(self):
-       self.intent_mappings = {}
+        self.intent_mappings = {}
        # read the mapping from a csv and store it in a dictionary
-       with open('C:/Users/niles/OneDrive/Learn/rasa/safebot/actions/intent_mapping.csv', newline='', encoding='utf-8') as file:
+    #    with open('C:/Users/niles/OneDrive/Learn/rasa/safebot/actions/intent_mapping.csv', newline='', encoding='utf-8') as file:
+        with open( os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + '\\actions\\' + 'intent_mapping.csv', newline='', encoding='utf-8') as file:
            csv_reader = csv.reader(file)
            for row in csv_reader:
                self.intent_mappings[row[0]] = row[1]
