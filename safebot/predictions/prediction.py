@@ -46,7 +46,8 @@ class Predictions:
 
                 preddata = pd.concat([df2]*400).sort_index()
 
-                filename = os.path.join(this_folder,'capstone_NLP_chatbot2.pkl')
+                # filename = os.path.join(this_folder,'capstone_NLP_chatbot2.pkl')
+                filename = os.path.join(this_folder,'lstm_xgb_lstm_full_model.pkl')
 
                 
                 loaded_model = CustomUnpickler(open(filename, 'rb')).load()
@@ -58,8 +59,28 @@ class Predictions:
 
 
                 return accident_level[result[0]]
+
+class Queries:
+        def __init__(self):
+            this_folder = os.path.dirname(os.path.abspath(__file__))
+            filename = os.path.join(this_folder,'IHMStefanini_industrial_safety_and_health_database_with_accidents_description_Dataset_SMOTE.csv')
+            self.data = pd.read_csv(filename)
+            self.data.drop("Unnamed: 0", axis=1, inplace=True)
+            self.data.rename(columns={'Data':'Date','Genre':'Gender','Industry Sector':'Industry','Accident Level':'Accident','Potential Accident Level':'Potential_Accident','Employee or Third Party':'Emp_Type','Critical Risk':'Critical Risk'},inplace=True)
+
+        def get_topaccident_description(self, accident_level):
+            df1= self.data
+            return df1[df1['Accident']==accident_level]['Description'].reset_index(drop=True)[0:5]
+
+# print ('Query -------------------------------- ')
+# q1=Queries()
+# myvar = q1.get_topaccident_description('I')
+# print ('My variable ' + myvar)
+
+
+
 # myvar = {
-#         # "Unnamed: 0":0,
+#         "Unnamed: 0":0,
 #         "Date" : ["2016-01-02 00:00:00"],
 #         "Countries": ["Country_01"],
 #         "Local":["Local_01"],

@@ -355,6 +355,7 @@ actions:
 - action_default_ask_affirmation
 - action_default_fallback
 - action_get_risktype
+- action_get_top_accidents
 - utter_ask_more_details
 - utter_ask_user_form_country
 - utter_ask_user_form_industry_type

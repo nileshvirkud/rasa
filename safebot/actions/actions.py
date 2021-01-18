@@ -14,7 +14,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + '\\predictions')
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + '\\actions')
 # print(sys.path)
-from prediction import Predictions
+from prediction import Predictions,Queries
 from actions import *
 
 from typing import Any, Text, Dict, List
@@ -57,6 +57,27 @@ import os, sys
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+
+
+class ActionGetTopAccident(Action):
+
+    def name(self) -> Text:
+        return "action_get_top_accidents"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+   
+        q1=Queries()
+
+        myvar = q1.get_topaccident_description('V')
+                
+        dispatcher.utter_message(text="{0}".format('\n-------------------------------------------------------------\n'.join(myvar)))
+
+        return []
+
+
+
 class ActionGetRiskType(Action):
 
     def name(self) -> Text:
@@ -67,6 +88,7 @@ class ActionGetRiskType(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
    
         myvar = {
+        "Unnamed: 0":0,
         "Date" : [datetime.today().strftime('%Y-%m-%d')],
         "Countries": [tracker.get_slot("country")],
         "Local":[tracker.get_slot("location")],

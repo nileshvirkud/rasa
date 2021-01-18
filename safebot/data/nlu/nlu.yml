@@ -643,6 +643,12 @@ nlu:
     - [Individual protection equipment](critical_risk)
     - [Electrical Shock](critical_risk)
     - [Projection of fragments](critical_risk)
+- intent: query_top_accidents
+  examples: |
+    - What are the top V severity accidents?
+    - Tell me description of top V severity accidents
+    - description of top V severity accidents
+    - what are the top severity accidents
 - intent: restart
   examples: |
     - yep you can restart

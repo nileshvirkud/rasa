@@ -90,3 +90,7 @@ rules:
   - active_loop: null
   - action: utter_ask_more_details
 
+- rule: query accidents
+  steps:
+  - intent: query_top_accidents
+  - action: action_get_top_accidents
