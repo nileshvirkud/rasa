@@ -72,7 +72,7 @@ class ActionGetTopAccident(Action):
 
         myvar = q1.get_topaccident_description('V')
                 
-        dispatcher.utter_message(text="{0}".format('\n-------------------------------------------------------------\n'.join(myvar)))
+        dispatcher.utter_message(text="{0}".format('-------------------------------------------------------------'.join(myvar)))
 
         return []
 

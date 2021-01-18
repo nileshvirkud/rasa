@@ -29,6 +29,7 @@ intents:
 - nlu_fallback
 - next_step
 - explain
+- query_top_accidents
 entities:
 - company
 - country
@@ -374,32 +375,32 @@ actions:
 forms:
   user_form:
     country:
-    - entity: country
+    - auto_fill: false
+      entity: country
       type: from_entity
-      auto_fill: false
     critical_risk:
-    - entity: critical_risk
+    - auto_fill: false
+      entity: critical_risk
       type: from_entity
-      auto_fill: false
     employee_type:
-    - entity: employee_type
+    - auto_fill: false
+      entity: employee_type
       type: from_entity
-      auto_fill: false
     gender:
-    - entity: gender
+    - auto_fill: false
+      entity: gender
       type: from_entity
-      auto_fill: false
     industry_type:
-    - entity: industry_type
+    - auto_fill: false
+      entity: industry_type
       type: from_entity
-      auto_fill: false
     location:
-    - entity: location
+    - auto_fill: false
+      entity: location
       type: from_entity
-      auto_fill: false
     potential_accident_level:
-    - entity: accident_level
+    - auto_fill: false
+      entity: accident_level
       type: from_entity
-      auto_fill: false
     zincident_description:
     - type: from_text
