@@ -95,7 +95,7 @@ class ActionGetRiskType(Action):
         "Industry": [tracker.get_slot("industry_type")],
         "Potential_Accident":[tracker.get_slot("potential_accident_level")],
         "Gender": [tracker.get_slot("gender")],
-        "Emp_Type":  [tracker.get_slot("employee_type")],
+        "Emp_Type":  [tracker.get_slot("employee_type").replace("Third Party Remote", "Third Party (Remote)")],
         "Critical Risk":[tracker.get_slot("critical_risk")],
         "Description":[tracker.get_slot('zincident_description')]
         # "Description":[tracker.latest_message['text']]

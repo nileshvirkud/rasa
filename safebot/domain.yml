@@ -157,7 +157,7 @@ responses:
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_ask_continue_user_form:
-  - text: Do you still want to classify risks/ know actident level?
+  - text: Do you still want to know the accident level?
   utter_great:
   - text: Great! 👍
   - text: That's great! 🙌
@@ -187,6 +187,8 @@ responses:
       title: Employee
     - payload: Third Party
       title: Third Party
+    - payload: Third Party Remote
+      title: Third Party Remote
     text: what is the employee type?
   utter_ask_user_form_accident_level:
   - buttons:
@@ -336,8 +338,7 @@ responses:
   - text: Believe it or not, I actually am not spying on your personal information.
   - text: You're the second person now to ask me that. Rihanna was the first.
   utter_chitchat/ask_whatspossible:
-  - text: I can help you classify safety risks and also predict the potential accident
-      severity.
+  - text: I can help you predict the potential accident level.
   utter_chitchat/ask_wherefrom:
   - text: I was born in India, but I consider myself a citizen of the world.
   - text: My developers come from India
@@ -379,13 +380,9 @@ forms:
       entity: country
       type: from_entity
     critical_risk:
-    - auto_fill: false
-      entity: critical_risk
-      type: from_entity
+    - type: from_text
     employee_type:
-    - auto_fill: false
-      entity: employee_type
-      type: from_entity
+    - type: from_text
     gender:
     - auto_fill: false
       entity: gender
