@@ -1,0 +1,16 @@
+[
+  {
+    "text": "chinese ok?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "language",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.5793833136558533,
+        "value": "chinese",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

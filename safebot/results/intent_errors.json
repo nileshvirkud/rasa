@@ -1,0 +1,138 @@
+[
+  {
+    "text": "are you cool",
+    "intent": "chitchat",
+    "intent_prediction": {
+      "name": "react_positive",
+      "confidence": 0.7654082775115967
+    }
+  },
+  {
+    "text": "perfect",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.7951463460922241
+    }
+  },
+  {
+    "text": "exit",
+    "intent": "canthelp",
+    "intent_prediction": {
+      "name": "bye",
+      "confidence": 0.7402284145355225
+    }
+  },
+  {
+    "text": "Nevermind",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.5332958698272705
+    }
+  },
+  {
+    "text": "so sad",
+    "intent": "react_negative",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.5224536657333374
+    }
+  },
+  {
+    "text": "so sad :(",
+    "intent": "react_negative",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.5224536657333374
+    }
+  },
+  {
+    "text": "very very sad",
+    "intent": "react_negative",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.6444857120513916
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "react_negative",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.7645264267921448
+    }
+  },
+  {
+    "text": "great",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6265940070152283
+    }
+  },
+  {
+    "text": "amazing",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6595191955566406
+    }
+  },
+  {
+    "text": "I am sad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "react_negative",
+      "confidence": 0.9167237877845764
+    }
+  },
+  {
+    "text": "super sad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "react_negative",
+      "confidence": 0.717511773109436
+    }
+  },
+  {
+    "text": "I'm so sad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "react_negative",
+      "confidence": 0.6215329766273499
+    }
+  },
+  {
+    "text": "sad",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "react_negative",
+      "confidence": 0.6654176115989685
+    }
+  },
+  {
+    "text": "Others",
+    "intent": "inform_critical_risk",
+    "intent_prediction": {
+      "name": "inform_industry_type",
+      "confidence": 0.6274192333221436
+    }
+  },
+  {
+    "text": "how old are you",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.9704172611236572
+    }
+  },
+  {
+    "text": "how",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.8510706424713135
+    }
+  }
+]

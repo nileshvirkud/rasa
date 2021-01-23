@@ -1,0 +1,20 @@
+version: "2.0"
+stories:
+- story: happy path 1 (C:\Users\niles\AppData\Local\Temp\tmp3zdf64w2\c5882589bd4c4066b31911aa8b3ec461_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great  # predicted: affirm: amazing
+  - action: utter_happy
+- story: happy path 2 (C:\Users\niles\AppData\Local\Temp\tmp3zdf64w2\c5882589bd4c4066b31911aa8b3ec461_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great  # predicted: affirm: amazing
+  - action: utter_happy
+  - intent: bye
+  - action: utter_goodbye
+- story: bot challenge (C:\Users\niles\AppData\Local\Temp\tmp3zdf64w2\c5882589bd4c4066b31911aa8b3ec461_test_stories.yml)
+  steps:
+  - intent: bot_challenge  # predicted: chitchat/ask_isbot: are you a bot?
+  - action: utter_iamabot  # predicted: utter_what_help

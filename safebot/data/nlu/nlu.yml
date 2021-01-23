@@ -507,142 +507,142 @@ nlu:
     - what is safety risk
 - intent: inform_industry_type
   examples: |
-    - [Mining](industry_type)
-    - [Metals](industry_type)
-    - [Others](industry_type)    
-    - [Chemical](industry_type)
-    - I work in [Mining](industry_type) industry
-    - I work in [Metals](industry_type) industry
-    - I work in [Chemical](industry_type) industry    
+    - Mining
+    - Metals
+    - Others 
+    - Chemical
+    - I work in Mining industry
+    - I work in Metals industry
+    - I work in Chemical industry    
 - intent: inform_country
   examples: |
-    - [Country_01](country)
-    - [Country_02](country)
-    - [Country_03](country)
-    - I am from [Country_01](country)
-    - I am from [Country_02](country)
-    - I am from [Country_03](country)
-    - I belong to [Country_01](country)
-    - I belong to [Country_02](country)
-    - I belong to [Country_03](country)              
+    - Country_01
+    - Country_02
+    - Country_03
+    - I am from Country_01
+    - I am from Country_02
+    - I am from Country_03
+    - I belong to Country_01
+    - I belong to Country_02
+    - I belong to Country_03              
 - intent: inform_location
   examples: |
-    - [Local_01](location)
-    - [Local_02](location)
-    - [Local_03](location)
-    - [Local_04](location)
-    - [Local_05](location)
-    - [Local_06](location)
-    - [Local_07](location)
-    - [Local_08](location)
-    - [Local_09](location)
-    - [Local_10](location)
-    - [Local_11](location)
-    - [Local_12](location)
-    - Its in [Local_01](location)
-    - Its in [Local_02](location)
-    - Its in [Local_03](location)
-    - Its in [Local_04](location)
-    - Its in [Local_05](location)
-    - Its in [Local_06](location)
-    - Its in [Local_07](location)
-    - Its in [Local_08](location)
-    - Its in [Local_09](location)
-    - Its in [Local_10](location)
-    - Its in [Local_11](location)
-    - Its in [Local_12](location)       
+    - Local_01 
+    - Local_02 
+    - Local_03 
+    - Local_04 
+    - Local_05 
+    - Local_06 
+    - Local_07 
+    - Local_08 
+    - Local_09 
+    - Local_10 
+    - Local_11 
+    - Local_12 
+    - Its in Local_01 
+    - Its in Local_02 
+    - Its in Local_03 
+    - Its in Local_04 
+    - Its in Local_05 
+    - Its in Local_06 
+    - Its in Local_07 
+    - Its in Local_08 
+    - Its in Local_09 
+    - Its in Local_10 
+    - Its in Local_11 
+    - Its in Local_12     
 - intent: inform_gender
   examples: |
-    - [Male](gender)
-    - [Female](gender)
+    - Male
+    - Female
 - intent: inform_employee_type
   examples: |
-    - [Employee](employee_type)
-    - [Third Party](employee_type)
-    - [Third Party Remote](employee_type)    
-    - I am an [employee](employee_type)
-    - Its [Employee](employee_type)
-    - he is an [employee](employee_type)
-    - she is an [employee](employee_type)
-    - It is [employee](employee_type)
-    - that is [employee](employee_type)
-    - [Employee](employee_type) it is
-    - [Employee](employee_type) that is
-    - he is from [Third Party](employee_type)
-    - she is from [Third Party](employee_type)
-    - it is [Third Party](employee_type)
-    - thats from [Third Party](employee_type)
-    - that is from [Third Party](employee_type)
-    - they are from [Third Party](employee_type)
-    - he works for [Third Party](employee_type)
-    - she works for [Third Party](employee_type)
-    - she belongs to [Third Party](employee_type)
-    - he belongs to [Third Party](employee_type)
-    - he is from [Third Party Remote](employee_type)
-    - she is from [Third Party Remote](employee_type)
-    - it is [Third Party Remote](employee_type)
-    - thats from [Third Party Remote](employee_type)
-    - that is from [Third Party Remote](employee_type)
-    - they are from [Third Party Remote](employee_type)
-    - he works for [Third Party Remote](employee_type)
-    - she works for [Third Party Remote](employee_type)
-    - she belongs to [Third Party Remote](employee_type)
-    - he belongs to [Third Party Remote](employee_type)    
+    - Employee  
+    - Third Party  
+    - Third Party Remote  
+    - I am an employee  
+    - Its Employee  
+    - he is an employee  
+    - she is an employee  
+    - It is employee  
+    - that is employee  
+    - Employee it is
+    - Employee that is
+    - he is from Third Party  
+    - she is from Third Party  
+    - it is Third Party  
+    - thats from Third Party  
+    - that is from Third Party  
+    - they are from Third Party  
+    - he works for Third Party  
+    - she works for Third Party  
+    - she belongs to Third Party  
+    - he belongs to Third Party  
+    - he is from Third Party Remote  
+    - she is from Third Party Remote  
+    - it is Third Party Remote  
+    - thats from Third Party Remote  
+    - that is from Third Party Remote  
+    - they are from Third Party Remote  
+    - he works for Third Party Remote  
+    - she works for Third Party Remote  
+    - she belongs to Third Party Remote  
+    - he belongs to Third Party Remote  
 - intent: inform_accident_level
   examples: |
-    - [I](accident_level)
-    - [II](accident_level)
-    - [III](accident_level)
-    - [IV](accident_level)            
-    - [V](accident_level)            
-    - [VI](accident_level)
-    - It is [I](accident_level)
-    - It is [II](accident_level)
-    - It is [III](accident_level)
-    - It is [IV](accident_level)            
-    - It is [V](accident_level)            
-    - It is [VI](accident_level)  
-    - I guess its [I](accident_level)
-    - I guess its [II](accident_level)
-    - I guess its [III](accident_level)
-    - I guess its [IV](accident_level)            
-    - I guess its [V](accident_level)            
-    - I guess its [VI](accident_level)       
+    - I 
+    - II 
+    - III 
+    - IV       
+    - V       
+    - VI 
+    - It is I 
+    - It is II 
+    - It is III 
+    - It is IV       
+    - It is V       
+    - It is VI  
+    - I guess its I 
+    - I guess its II 
+    - I guess its III 
+    - I guess its IV       
+    - I guess its V       
+    - I guess its VI        
 - intent: inform_critical_risk
   examples: |
-    - [Pressed](critical_risk)
-    - [Pressurized Systems](critical_risk)
-    - [Manual Tools](critical_risk)
-    - [Others](critical_risk)
-    - [Fall prevention](critical_risk)
-    - [Chemical substances](critical_risk)
-    - [Liquid Metal](critical_risk)
-    - [Electrical installation](critical_risk)
-    - [Confined space](critical_risk)
-    - [Pressurized Systems / Chemical Substances](critical_risk)
-    - [Blocking and isolation of energies](critical_risk)
-    - [Suspended Loads](critical_risk)
-    - [Poll](critical_risk)
-    - [Cut](critical_risk)
-    - [Fall](critical_risk)
-    - [Bees](critical_risk)
-    - [Fall prevention](critical_risk)
-    - [Not applicable](critical_risk)
-    - [Traffic](critical_risk)
-    - [Projection](critical_risk)
-    - [Venomous Animals](critical_risk)
-    - [Plates](critical_risk)
-    - [Projection/Burning](critical_risk)
-    - [remains of choco](critical_risk)
-    - [Vehicles and Mobile Equipment](critical_risk)
-    - [Projection/Choco](critical_risk)
-    - [Machine Protection](critical_risk)
-    - [Power lock](critical_risk)
-    - [Burn](critical_risk)
-    - [Projection/Manual Tools](critical_risk)
-    - [Individual protection equipment](critical_risk)
-    - [Electrical Shock](critical_risk)
-    - [Projection of fragments](critical_risk)
+    - Pressed    
+    - Pressurized Systems    
+    - Manual Tools    
+    - Others
+    - Fall prevention    
+    - Chemical substances    
+    - Liquid Metal    
+    - Electrical installation    
+    - Confined space    
+    - Pressurized Systems / Chemical Substances    
+    - Blocking and isolation of energies    
+    - Suspended Loads    
+    - Poll    
+    - Cut    
+    - Fall    
+    - Bees    
+    - Fall prevention    
+    - Not applicable    
+    - Traffic    
+    - Projection    
+    - Venomous Animals    
+    - Plates    
+    - Projection/Burning    
+    - remains of choco    
+    - Vehicles and Mobile Equipment    
+    - Projection/Choco    
+    - Machine Protection    
+    - Power lock    
+    - Burn    
+    - Projection/Manual Tools    
+    - Individual protection equipment    
+    - Electrical Shock    
+    - Projection of fragments    
 - intent: query_top_accidents
   examples: |
     - What are the top V severity accidents?

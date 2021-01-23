@@ -32,45 +32,39 @@ intents:
 - query_top_accidents
 entities:
 - company
-- country
 - feedback_value
-- industry_type
 - job_function
 - language
-- location
 - name
 - user_type
-- gender
-- employee_type
-- accident_level
-- critical_risk
+- location
 slots:
   industry_type:
-    type: text
+    type: any
     influence_conversation: false
   gender:
-    type: text
+    type: any
     influence_conversation: false
   employee_type:
-    type: text
+    type: any
     influence_conversation: false
   location:
-    type: text
+    type: any
     influence_conversation: false
   country:
-    type: text
+    type: any
     influence_conversation: false
   accident_level:
-    type: text
+    type: any
     influence_conversation: false
   potential_accident_level:
-    type: text
+    type: any
     influence_conversation: false
   critical_risk:
-    type: text
+    type: any
     influence_conversation: false
   zincident_description:
-    type: text
+    type: any
     influence_conversation: false
   feedback_value:
     type: categorical
@@ -377,27 +371,24 @@ forms:
   user_form:
     country:
     - auto_fill: false
-      entity: country
-      type: from_entity
+      type: from_text
     critical_risk:
-    - type: from_text
+    - auto_fill: false
+      type: from_text
     employee_type:
-    - type: from_text
+    - auto_fill: false
+      type: from_text
     gender:
     - auto_fill: false
-      entity: gender
-      type: from_entity
+      type: from_text
     industry_type:
     - auto_fill: false
-      entity: industry_type
-      type: from_entity
+      type: from_text
     location:
     - auto_fill: false
-      entity: location
-      type: from_entity
+      type: from_text
     potential_accident_level:
     - auto_fill: false
-      entity: accident_level
-      type: from_entity
+      type: from_text
     zincident_description:
     - type: from_text

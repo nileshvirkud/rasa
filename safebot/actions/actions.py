@@ -102,8 +102,18 @@ class ActionGetRiskType(Action):
         }
 
         p1 = Predictions(myvar)
-                
-        dispatcher.utter_message(text="The accident level based on the data you provided is : {0}".format(p1.predict()))
+        x =p1.predict()
+        if x =='V':
+                dispatcher.utter_message(text="The accident level based on the data you provided is  {0} . Please do not panic.I have called an ambulance. Your superviser has been notified.I will set up a root cause ananlysis meeting shortly.".format(x))
+        elif x =='IV':
+                dispatcher.utter_message(text="The accident level based on the data you provided is {0}. Your superviser has been notified.I will set up a root cause ananlysis meeting shortly.".format(x))            
+        elif x =='III':
+                dispatcher.utter_message(text="The accident level based on the data you provided is {0}. Your superviser has been notified.Help is on its way.".format(x))            
+        elif x =='II':
+                dispatcher.utter_message(text="The accident level based on the data you provided is {0}. Your superviser has been notified.Your incident has been registered.".format(x))            
+        else:       
+                dispatcher.utter_message(text="The accident level based on the data you provided is : {0}".format(x))
+
         # dispatcher.utter_message(text="The predicted accident level is : {0}".format(ctext))
 
         return []
